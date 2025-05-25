@@ -1,0 +1,30 @@
+# Arquivos do sistema
+*.DS_Store
+*.swp
+
+# Logs
+/application/logs/*
+!application/logs/index.html
+
+# Cache
+/application/cache/*
+!application/cache/index.html
+
+# Arquivos de configuração sensíveis
+/application/config/database.php
+
+# Pastas de uploads (opcional)
+uploads/*
+
+# Composer (se for usar)
+vendor/
+composer.lock
+
+# Node (se tiver)
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

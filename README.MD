@@ -1,11 +1,11 @@
 
-# 🚀 ERP Montink
+# ERP Montink
 
 Sistema de gerenciamento de produtos, estoque, pedidos e cupons desenvolvido em **CodeIgniter 3** com ambiente Docker.
 
 ---
 
-## 🐳 **Subindo o projeto com Docker**
+## **Subindo o projeto com Docker**
 
 ### 1. Clone o repositório
 
@@ -26,16 +26,16 @@ sudo chown -R $USER:$USER .
 docker-compose up -d
 ```
 
-👉 O projeto ficará disponível em: [http://localhost:8788](http://localhost:8788)
+O projeto ficará disponível em: [http://localhost:8788](http://localhost:8788)
 
 ---
 
-## 🗄️ **Banco de Dados**
+## **Banco de Dados**
 
 - O banco será criado automaticamente com o container.
 - As tabelas são geradas a partir do arquivo `init.sql` que roda na primeira vez que o container do banco sobe.
 
-### 🔗 Conexão com o banco:
+### Conexão com o banco:
 
 | Parametro | Valor                          |
 |------------|-------------------------------|
@@ -53,9 +53,9 @@ docker exec -it montink_db mysql -u erp_montink_admin -p
 
 ---
 
-## ⚙️ **Configurações importantes**
+## **Configurações importantes**
 
-### 🔗 Base URL
+### Base URL
 
 No arquivo `application/config/config.php`:
 
@@ -65,7 +65,7 @@ $config['base_url'] = 'http://localhost:8788/';
 
 ---
 
-## 📂 **Estrutura dos containers**
+## **Estrutura dos containers**
 
 | Serviço | Descrição             | Porta        |
 |---------|------------------------|--------------|
@@ -74,13 +74,13 @@ $config['base_url'] = 'http://localhost:8788/';
 
 ---
 
-## 🛑 **Parar os containers**
+## **Parar os containers**
 
 ```bash
 docker-compose down
 ```
 
-## ♻️ **Resetar banco (opcional)**
+## **Resetar banco (opcional)**
 
 ```bash
 docker-compose down -v
@@ -88,6 +88,6 @@ docker-compose down -v
 
 ---
 
-## ✍️ **Autor**
+## **Autor**
 
 - [Calixto Nascimento](https://github.com/calixtonascimento)

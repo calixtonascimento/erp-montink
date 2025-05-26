@@ -1,0 +1,36 @@
+services:
+  app:
+    build: .
+    container_name: montink_app
+    ports:
+      - "8788:80"
+    volumes:
+      - ./:/var/www/html
+    networks:
+      - montink-network
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.5
+    container_name: montink_db
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: erp_montink
+      MARIADB_USER: erp_montink_admin
+      MARIADB_PASSWORD: teste123
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - montink-network
+
+networks:
+  montink-network:
+
+volumes:
+  dbdata:
